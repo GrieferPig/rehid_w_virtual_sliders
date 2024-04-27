@@ -1,4 +1,41 @@
-# Rehid
+# Rehid - Saves your broken 3DS sliders!
+
+**TL;DR: download the zip file from release and unzip it to your sd card root. Use START+L/R to adjust volume, SELECT+L/R to adjust 3D**
+
+You don't need **rehidhelper** for this, and do not use that to update rehid module, it will overwrite this module with the original one which does not have adjustable virtual sliders
+
+---
+
+**Although Rehid is used for remapping buttons on 3DS, I figured out that it can also use as a macro to react to a key combo**
+
+**This fork added mapping support for both sliders. Add and modify this in your rehid json config file to fit your preference**
+```Json
+{
+    "keys": [
+        {
+            "get": "VOLUP",
+            "press": "START+R"
+        },
+        {
+            "get": "VOLDN",
+            "press": "START+L"
+        },
+        {
+            "get": "3DUP",
+            "press": "SELECT+R"
+        },
+        {
+            "get": "3DDN",
+            "press": "SELECT+L"
+        }
+    ]
+}
+```
+**Note that because I am lazy and these "virtual function keys" (VOLUP, VOLDN, etc. above) are only applicable to key-to-key mappings. That said, I don't see using circle pad and touch screen to adjust volume is really the best way to do that**
+
+shamelessly copied from Luma3ds, thanks PabloMK7 & profi200
+
+---
 
 HID module rewrite with the aim of easier button remapping and more.
 
